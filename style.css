@@ -1,11 +1,9 @@
-/* Reset some default styles */
-body, h1, h2, p, button, a {
+body, h1, h2, p, button {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* General body styling */
 body {
     background: #f0f2f5;
     color: #333;
@@ -14,7 +12,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header styling */
 header {
     text-align: center;
     padding: 2rem;
@@ -22,7 +19,6 @@ header {
     color: white;
 }
 
-/* Main content */
 main {
     flex: 1;
     display: flex;
@@ -32,7 +28,6 @@ main {
     padding: 2rem;
 }
 
-/* Individual tool sections */
 .tool {
     background: white;
     padding: 2rem;
@@ -43,7 +38,7 @@ main {
     text-align: center;
 }
 
-.tool button, .tool a.button {
+.tool button {
     background: #4CAF50;
     color: white;
     border: none;
@@ -51,15 +46,22 @@ main {
     margin-top: 1rem;
     border-radius: 8px;
     cursor: pointer;
-    text-decoration: none;
     font-size: 1rem;
 }
 
-.tool button:hover, .tool a.button:hover {
+.tool button:hover {
     background: #45a049;
 }
 
-/* Footer styling */
+.iframe-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+iframe {
+    border: 2px solid #ccc;
+    border-radius: 12px;
+}
 footer {
     text-align: center;
     padding: 1rem;
