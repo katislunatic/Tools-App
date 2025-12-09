@@ -16,20 +16,37 @@
         <section class="tool">
             <h2>Video Downloader</h2>
             <p>Download videos easily from supported sites.</p>
-            <button onclick="window.open('https://cnvmp3.com/v51', '_blank')">
-                Open Video Downloader
-            </button>
+            <button onclick="showTool('video')">Open Video Downloader</button>
         </section>
 
         <section class="tool">
             <h2>Example Tool</h2>
-            <p>This is a placeholder for your next tool.</p>
-            <a href="tools/placeholder.html" class="button">Open Example Tool</a>
+            <p>Placeholder for another tool.</p>
+            <button onclick="showTool('example')">Open Example Tool</button>
+        </section>
+
+        <!-- This is where tools will load -->
+        <section id="iframe-container" class="iframe-container">
+            <iframe id="tool-frame" src="" style="display:none;"></iframe>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Tools Hub</p>
     </footer>
+
+    <script>
+        function showTool(tool) {
+            const frame = document.getElementById('tool-frame');
+            if(tool === 'video') {
+                frame.src = 'https://cnvmp3.com/v51';
+            } else if(tool === 'example') {
+                frame.src = 'tools/example.html'; // your own tool page
+            }
+            frame.style.display = 'block';
+            frame.style.width = '100%';
+            frame.style.height = '600px';
+        }
+    </script>
 </body>
 </html>
