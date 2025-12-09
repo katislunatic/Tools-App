@@ -30,7 +30,7 @@
         <p>&copy; 2025 Tools Hub</p>
     </footer>
 
-    <!-- Fullscreen popup modal -->
+    <!-- Fullscreen centered modal -->
     <div id="tool-modal" class="modal">
         <span class="close" onclick="closeTool()">&times;</span>
         <iframe id="tool-frame" src=""></iframe>
@@ -41,14 +41,14 @@
             const modal = document.getElementById('tool-modal');
             const frame = document.getElementById('tool-frame');
             frame.src = url;
-            modal.style.display = 'flex';
+            modal.style.display = 'flex'; // show modal
         }
 
         function closeTool() {
             const modal = document.getElementById('tool-modal');
             const frame = document.getElementById('tool-frame');
-            frame.src = '';
-            modal.style.display = 'none';
+            frame.src = ''; // clear iframe
+            modal.style.display = 'none'; // hide modal
         }
     </script>
 </body>
